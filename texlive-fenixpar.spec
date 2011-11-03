@@ -1,3 +1,9 @@
+# revision 18147
+# category Package
+# catalog-ctan /macros/generic/fenixpar
+# catalog-date 2010-05-07 00:23:44 +0200
+# catalog-license lppl
+# catalog-version 0.91
 Name:		texlive-fenixpar
 Version:	0.91
 Release:	1
@@ -46,6 +52,7 @@ LaTeX.
 %{_texmfdistdir}/tex/generic/fenixpar/fenixpar.sty
 %{_texmfdistdir}/tex/generic/fenixpar/fenixtok.sty
 %doc %{_texmfdistdir}/doc/generic/fenixpar/README
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -56,3 +63,5 @@ LaTeX.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
