@@ -1,11 +1,11 @@
-# revision 18147
+# revision 24730
 # category Package
 # catalog-ctan /macros/generic/fenixpar
-# catalog-date 2010-05-07 00:23:44 +0200
+# catalog-date 2011-11-18 23:08:42 +0100
 # catalog-license lppl
-# catalog-version 0.91
+# catalog-version 0.92
 Name:		texlive-fenixpar
-Version:	0.91
+Version:	0.92
 Release:	1
 Summary:	One-shot changes to token registers such as \everypar
 Group:		Publishing
@@ -17,7 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
 
 %description
 The bundle provides two packages, fenxitok and fenixpar. The
@@ -33,19 +32,19 @@ extensions; with them, they work either with Plain TeX or with
 LaTeX.
 
 %pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
