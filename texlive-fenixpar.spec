@@ -31,16 +31,8 @@ of fenixtok to provide a user interface to manipulation of the
 extensions; with them, they work either with Plain TeX or with
 LaTeX.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -52,7 +44,6 @@ LaTeX.
 %{_texmfdistdir}/tex/generic/fenixpar/fenixpar.sty
 %{_texmfdistdir}/tex/generic/fenixpar/fenixtok.sty
 %doc %{_texmfdistdir}/doc/generic/fenixpar/README
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -63,5 +54,3 @@ LaTeX.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
