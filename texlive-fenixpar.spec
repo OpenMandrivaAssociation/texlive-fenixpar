@@ -6,7 +6,7 @@
 # catalog-version 0.92
 Name:		texlive-fenixpar
 Version:	0.92
-Release:	1
+Release:	2
 Summary:	One-shot changes to token registers such as \everypar
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/fenixpar
