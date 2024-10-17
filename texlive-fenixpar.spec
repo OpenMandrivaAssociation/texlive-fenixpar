@@ -3,7 +3,7 @@ Version:	24730
 Release:	2
 Summary:	One-shot changes to token registers such as \everypar
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/generic/fenixpar
+URL:		https://www.ctan.org/tex-archive/macros/generic/fenixpar
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fenixpar.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fenixpar.doc.r%{version}.tar.xz
